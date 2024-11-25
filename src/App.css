@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* 캘린더 스타일 */
+.calendar {
+  margin-bottom: 30px;
+  border: 2px solid #4CAF50;
+  border-radius: 8px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* 일정 입력 스타일 */
+.input-group {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input-group input {
+  border-radius: 5px;
+  padding: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button.btn-success {
+  background-color: #4CAF50;
   color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
 }
 
-.App-link {
-  color: #61dafb;
+button.btn-success:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* 일정 리스트 스타일 */
+.list-group-item {
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.list-group-item button {
+  margin-left: 10px;
+}
+
+.list-group-item.completed {
+  background-color: #f1f1f1;
+  text-decoration: line-through;
+}
+
+.event-title {
+  font-weight: bold;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+  .container {
+    margin-top: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .calendar {
+    width: 100%;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  button.btn-success {
+    width: 100%;
   }
 }
